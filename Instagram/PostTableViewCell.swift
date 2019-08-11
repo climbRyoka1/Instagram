@@ -15,6 +15,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var comentButton: UIButton!
+    @IBOutlet weak var comentLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,13 +27,14 @@ class PostTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     func setPostData(_ postData: PostData) {
         self.postImageView.image = postData.image
         
         self.captionLabel.text = "\(postData.name!) : \(postData.caption!)"
         let likeNumber = postData.likes.count
         likeLabel.text = "\(likeNumber)"
+        
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm"
@@ -46,6 +48,10 @@ class PostTableViewCell: UITableViewCell {
             let buttonImage = UIImage(named: "like_none")
             self.likeButton.setImage(buttonImage, for: .normal)
         }
+        
+      if postData.commented{
+           self.comentLabel.text = "\(postData.coment)"
+       }
     }
 }
 

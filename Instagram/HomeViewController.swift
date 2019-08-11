@@ -110,29 +110,28 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
         
         // セル内のボタンのアクションをソースコードで設定する
         cell.likeButton.addTarget(self, action:#selector(handleButton(_:forEvent:)), for: .touchUpInside)
-        cell.comentButton.addTarget(self, action: #selector(comentPost(_:forEvent:)), for: .touchUpInside)
+       cell.comentButton.addTarget(self, action: #selector(comentPost(_:forEvent:)), for: .touchUpInside)
         return cell
     }
     
     @objc func handleButton(_ sender: UIButton, forEvent event: UIEvent) {
         print("DEBUG_PRINT: likeボタンがタップされました。")
         
-        // タップされたセルのインデックスを求める
+        
         let touch = event.allTouches?.first
         let point = touch!.location(in: self.tableView)
         let indexPath = tableView.indexPathForRow(at: point)
         
-        // 配列からタップされたインデックスのデータを取り出す
+        
         let postData = postArray[indexPath!.row]
         
         // Firebaseに保存するデータの準備
         if let uid = Auth.auth().currentUser?.uid {
             if postData.isLiked {
-                // すでにいいねをしていた場合はいいねを解除するためIDを取り除く
+            
                 var index = -1
                 for likeId in postData.likes {
                     if likeId == uid {
-                        // 削除するためにインデックスを保持しておく
                         index = postData.likes.firstIndex(of: likeId)!
                         break
                     }
@@ -150,9 +149,9 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
         }
     }
     
-    @objc func comentPost(_ sender: UIButton, forEvent event: UIEvent){
-        let comentViewController = self.storyboard?.instantiateViewController(withIdentifier: "coment")
-        self.present(comentViewController!, animated: true, completion: nil)
-    }
+ @objc func comentPost(_ sender: UIButton, forEvent event: UIEvent){
+       let comentViewController = self.storyboard?.instantiateViewController(withIdentifier: "coment")
+       self.present(comentViewController!, animated: true, completion: nil)
+   }
     
 }
