@@ -23,7 +23,6 @@
 		F39D44A822EDACCA00F81239 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39D44A722EDACCA00F81239 /* Const.swift */; };
 		F3B29CEB22FE3E8000AB5928 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B29CE922FE3E8000AB5928 /* PostTableViewCell.swift */; };
 		F3B29CEC22FE3E8000AB5928 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F3B29CEA22FE3E8000AB5928 /* PostTableViewCell.xib */; };
-		F3B29CF022FE8CA000AB5928 /* ComentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B29CEF22FE8CA000AB5928 /* ComentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +46,6 @@
 		F39D44A722EDACCA00F81239 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		F3B29CE922FE3E8000AB5928 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		F3B29CEA22FE3E8000AB5928 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
-		F3B29CEF22FE8CA000AB5928 /* ComentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +103,6 @@
 				F3619FF422E6512D00277D11 /* LoginViewController.swift */,
 				F314E5D822EDD3F700EE124C /* PostData.swift */,
 				F3619FFA22E6522A00277D11 /* PostViewController.swift */,
-				F3B29CEF22FE8CA000AB5928 /* ComentViewController.swift */,
 				F3B29CE922FE3E8000AB5928 /* PostTableViewCell.swift */,
 				F3B29CEA22FE3E8000AB5928 /* PostTableViewCell.xib */,
 				F361A00022E653E600277D11 /* ImageSelectViewController.swift */,
@@ -241,7 +238,6 @@
 				F361A00122E653E600277D11 /* ImageSelectViewController.swift in Sources */,
 				F314E5D922EDD3F700EE124C /* PostData.swift in Sources */,
 				F3619FFB22E6522A00277D11 /* PostViewController.swift in Sources */,
-				F3B29CF022FE8CA000AB5928 /* ComentViewController.swift in Sources */,
 				F3619FF522E6512D00277D11 /* LoginViewController.swift in Sources */,
 				F3619FE522E5DA5300277D11 /* ViewController.swift in Sources */,
 				F3619FE322E5DA5300277D11 /* AppDelegate.swift in Sources */,
