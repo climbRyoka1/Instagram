@@ -150,8 +150,42 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
     }
     
  @objc func comentPost(_ sender: UIButton, forEvent event: UIEvent){
-       let comentViewController = self.storyboard?.instantiateViewController(withIdentifier: "coment")
-       self.present(comentViewController!, animated: true, completion: nil)
-   }
     
-}
+    let touch = event.allTouches?.first
+    let point = touch!.location(in: self.tableView)
+    let indexPath = tableView.indexPathForRow(at: point)
+    let postData = postArray[indexPath!.row]
+    
+    
+    let alertController = UIAlertController(title: "コメント", message: "コメントを入力してね", preferredStyle: .alert)
+    
+    alertController.addTextField { (textField:UITextField) in
+        textField.placeholder = ""
+        
+    }
+    let postAction: UIAlertAction = UIAlertAction(title: "投稿", style: .default) { (UIAlertAction) in
+        if let text = alertController.textFields{
+            
+           
+            let poster = Auth.auth().currentUser?.displayName
+            let postRef = Database.database().reference().child(Const.PostPath).child(postData.id!)
+            let coment = ["coment": text[0].text!, "poster": poster!]
+            postRef.updateChildValues(coment)
+           
+           print(coment)
+            
+        }
+    }
+    
+    let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
+    
+   
+        alertController.addAction(postAction)
+        alertController.addAction(cancelAction)
+    
+    present(alertController, animated: true, completion: nil)
+    
+    }
+    }
+    
+

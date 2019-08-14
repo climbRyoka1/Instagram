@@ -106,62 +106,6 @@
             </objects>
             <point key="canvasLocation" x="123" y="831"/>
         </scene>
-        <!--Coment View Controller-->
-        <scene sceneID="Imq-7O-mMC">
-            <objects>
-                <viewController storyboardIdentifier="coment" id="5nP-Wg-NAS" customClass="ComentViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ZfT-cB-dlh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="00R-Bk-gs1">
-                                <rect key="frame" x="10" y="74" width="394" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhV-dH-2zK">
-                                <rect key="frame" x="20" y="144" width="374" height="40"/>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="コメント投稿" backgroundImage="btn"/>
-                                <connections>
-                                    <action selector="comentPostButton:" destination="5nP-Wg-NAS" eventType="touchUpInside" id="hq5-OJ-Nnb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="al5-eG-X8h">
-                                <rect key="frame" x="20" y="214" width="374" height="40"/>
-                                <inset key="contentEdgeInsets" minX="0.0" minY="-1" maxX="0.0" maxY="0.0"/>
-                                <state key="normal" title="キャンセル" backgroundImage="btn"/>
-                                <connections>
-                                    <action selector="cancelButton:" destination="5nP-Wg-NAS" eventType="touchUpInside" id="xqb-oN-507"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="fhV-dH-2zK" firstAttribute="centerX" secondItem="ZfT-cB-dlh" secondAttribute="centerX" id="G76-kc-d8p"/>
-                            <constraint firstItem="fhV-dH-2zK" firstAttribute="leading" secondItem="fgg-hL-14p" secondAttribute="leading" constant="20" id="IsU-Vm-g1B"/>
-                            <constraint firstItem="00R-Bk-gs1" firstAttribute="centerX" secondItem="ZfT-cB-dlh" secondAttribute="centerX" id="LmS-Y1-o9W"/>
-                            <constraint firstItem="al5-eG-X8h" firstAttribute="leading" secondItem="fgg-hL-14p" secondAttribute="leading" constant="20" id="Rbx-Vl-B4O"/>
-                            <constraint firstItem="al5-eG-X8h" firstAttribute="centerX" secondItem="ZfT-cB-dlh" secondAttribute="centerX" id="VST-sR-LJ1"/>
-                            <constraint firstItem="fgg-hL-14p" firstAttribute="trailing" secondItem="00R-Bk-gs1" secondAttribute="trailing" constant="10" id="c1c-7U-gLN"/>
-                            <constraint firstItem="00R-Bk-gs1" firstAttribute="leading" secondItem="fgg-hL-14p" secondAttribute="leading" constant="10" id="dvn-l7-hYi"/>
-                            <constraint firstItem="fgg-hL-14p" firstAttribute="trailing" secondItem="fhV-dH-2zK" secondAttribute="trailing" constant="20" id="iIZ-De-8xj"/>
-                            <constraint firstItem="fgg-hL-14p" firstAttribute="trailing" secondItem="al5-eG-X8h" secondAttribute="trailing" constant="20" id="mHf-Qq-tuT"/>
-                            <constraint firstItem="00R-Bk-gs1" firstAttribute="top" secondItem="fgg-hL-14p" secondAttribute="top" constant="30" id="pDz-0T-i3b"/>
-                            <constraint firstItem="fhV-dH-2zK" firstAttribute="top" secondItem="00R-Bk-gs1" secondAttribute="bottom" constant="40" id="sON-Bd-yxW"/>
-                            <constraint firstItem="al5-eG-X8h" firstAttribute="top" secondItem="fhV-dH-2zK" secondAttribute="bottom" constant="30" id="zDd-Jh-d37"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="fgg-hL-14p" colorLabel="IBBuiltInLabel-Orange"/>
-                    </view>
-                    <connections>
-                        <outlet property="comentText" destination="00R-Bk-gs1" id="XJ7-lj-bq2"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tId-7F-fWV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="140.57971014492756" y="1541.5178571428571"/>
-        </scene>
         <!--Home View Controller-->
         <scene sceneID="rSr-Ga-g4j">
             <objects>

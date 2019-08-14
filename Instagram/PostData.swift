@@ -18,8 +18,8 @@ class PostData: NSObject{
     var date: Date?
     var likes: [String] = []
     var isLiked: Bool = false
-    var coment: [String] = []
-    var commented: Bool = false
+    var coment: String?
+    var poster: String?
 
    
     
@@ -51,15 +51,9 @@ class PostData: NSObject{
             }
         }
         
-        if let coments = valueDictionary["coment"] as? [String]{
-            self.coment = coments
-       }
-       for comentId in self.coment{
-           if comentId == myId{
-               self.commented = true
-               break
-           }
-        }
+       self.coment = valueDictionary["coment"] as? String
+      
+       self.poster = valueDictionary["poster"] as? String
     }
     
     
