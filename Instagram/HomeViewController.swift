@@ -167,14 +167,12 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
     let postAction: UIAlertAction = UIAlertAction(title: "投稿", style: .default) { (UIAlertAction) in
         if let text = alertController.textFields{
             
-           
+            
             let poster = Auth.auth().currentUser?.displayName
             let postRef = Database.database().reference().child(Const.PostPath).child(postData.id!)
             let coment = ["coment": text[0].text!, "poster": poster!]
             postRef.updateChildValues(coment)
-           
-            
-           
+          
             
         }
     }

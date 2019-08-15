@@ -52,9 +52,7 @@ class PostTableViewCell: UITableViewCell {
         self.comentLabel.text = ""
     
         if postData.comentted{
-            self.comentLabel.text = ("\(postData.poster!):\(postData.coment!)\n")
-     print(postData.poster!)
-     print(postData.coment!)
+            self.comentLabel.text = "\(postData.poster!):\(postData.coment!)"
         }
       
     }
