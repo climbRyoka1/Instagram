@@ -50,7 +50,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfi-Ky-Nxn">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pfi-Ky-Nxn">
                         <rect key="frame" x="182" y="553" width="296" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -59,14 +59,20 @@
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="ASk-Zk-QdT">
                         <rect key="frame" x="10" y="593" width="488" height="95.5"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aL8-JB-OUR">
-                                <rect key="frame" x="10" y="32.5" width="468" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aL8-JB-OUR">
+                                <rect key="frame" x="10" y="10" width="468" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stz-DK-2q2">
-                                <rect key="frame" x="10" y="75" width="468" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2t-Kw-qcU">
+                                <rect key="frame" x="10" y="73.5" width="468" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stz-DK-2q2">
+                                <rect key="frame" x="10" y="95.5" width="468" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -78,6 +84,10 @@
                             <constraint firstItem="aL8-JB-OUR" firstAttribute="top" secondItem="ASk-Zk-QdT" secondAttribute="top" constant="10" id="GDJ-LU-aOe"/>
                             <constraint firstAttribute="trailing" secondItem="aL8-JB-OUR" secondAttribute="trailing" constant="10" id="PcV-QP-jdP"/>
                             <constraint firstItem="stz-DK-2q2" firstAttribute="leading" secondItem="ASk-Zk-QdT" secondAttribute="leading" constant="10" id="QCF-r5-0qq"/>
+                            <constraint firstItem="aL8-JB-OUR" firstAttribute="top" secondItem="ASk-Zk-QdT" secondAttribute="top" constant="10" id="QIN-B1-ink"/>
+                            <constraint firstAttribute="trailing" secondItem="S2t-Kw-qcU" secondAttribute="trailing" constant="10" id="WHA-FI-Bmb"/>
+                            <constraint firstItem="S2t-Kw-qcU" firstAttribute="top" secondItem="aL8-JB-OUR" secondAttribute="bottom" constant="10" id="fZJ-lk-pr6"/>
+                            <constraint firstItem="S2t-Kw-qcU" firstAttribute="leading" secondItem="ASk-Zk-QdT" secondAttribute="leading" constant="10" id="jv6-KK-5xT"/>
                         </constraints>
                     </stackView>
                 </subviews>
@@ -105,7 +115,7 @@
             <connections>
                 <outlet property="captionLabel" destination="aL8-JB-OUR" id="h8l-r9-XAh"/>
                 <outlet property="comentButton" destination="TQ1-Hl-hd8" id="rHz-cE-1tb"/>
-                <outlet property="comentLabel" destination="stz-DK-2q2" id="zDX-xK-FgU"/>
+                <outlet property="comentLabel" destination="S2t-Kw-qcU" id="J7E-zC-dHV"/>
                 <outlet property="dateLabel" destination="Pfi-Ky-Nxn" id="e51-ab-RFx"/>
                 <outlet property="likeButton" destination="COx-QB-Z8v" id="GAb-90-RMZ"/>
                 <outlet property="likeLabel" destination="Mvk-RN-kai" id="44c-iX-Xdb"/>

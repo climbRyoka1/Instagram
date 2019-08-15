@@ -20,6 +20,7 @@ class PostData: NSObject{
     var isLiked: Bool = false
     var coment: String?
     var poster: String?
+    var comentted: Bool = false
 
    
     
@@ -50,10 +51,17 @@ class PostData: NSObject{
                 break
             }
         }
+        if let coments = valueDictionary["coment"] as? String{
+            self.coment = coments
+            self.comentted = true
+        }
         
-       self.coment = valueDictionary["coment"] as? String
-      
-       self.poster = valueDictionary["poster"] as? String
+       
+        
+       
+        if let posters = valueDictionary["poster"] as? String{
+       self.poster = posters
+        }
     }
     
     
