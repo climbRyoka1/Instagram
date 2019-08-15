@@ -16,6 +16,7 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
     // DatabaseのobserveEventの登録状態を表す
     var observing = false
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -107,7 +108,7 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
         // セルを取得してデータを設定する
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PostTableViewCell
         cell.setPostData(postArray[indexPath.row])
-        
+      
         // セル内のボタンのアクションをソースコードで設定する
         cell.likeButton.addTarget(self, action:#selector(handleButton(_:forEvent:)), for: .touchUpInside)
        cell.comentButton.addTarget(self, action: #selector(comentPost(_:forEvent:)), for: .touchUpInside)
@@ -166,13 +167,12 @@ class HomeViewController: UIViewController,UITableViewDataSource,UITableViewDele
     let postAction: UIAlertAction = UIAlertAction(title: "投稿", style: .default) { (UIAlertAction) in
         if let text = alertController.textFields{
             
-           
+            
             let poster = Auth.auth().currentUser?.displayName
             let postRef = Database.database().reference().child(Const.PostPath).child(postData.id!)
             let coment = ["coment": text[0].text!, "poster": poster!]
             postRef.updateChildValues(coment)
-           
-           print(coment)
+          
             
         }
     }
